@@ -17,7 +17,7 @@ bucket_name = 'buildresult'
 
 object_name = 'lastsuccessful/helloNcp-0.0.1-SNAPSHOT.war'
 
-local_file_path = '/home/devtrack/deploy/backups/backup/helloNcp-1.1.0-SNAPSHOT.war.' + str(now)
+local_file_path = '/home/devtrack/deploy/backups/helloNcp-1.1.0-SNAPSHOT.war.' + str(now)
 print local_file_path
 
 # download file
