@@ -26,6 +26,6 @@ s3.download_file(bucket_name, object_name, local_file_path)
 
 
 # upload file
-object_name = 'backup/helloNcp-0.0.1-SNAPSHOT.war'
+object_name = 'backup/helloNcp-0.0.1-SNAPSHOT.war' + str(now)
 
 s3.upload_file(local_file_path, bucket_name, object_name)
