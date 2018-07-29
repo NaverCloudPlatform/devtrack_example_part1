@@ -43,18 +43,18 @@ node {
     stage('Deploy') {        
         
         // "빌드 결과물을 objectstorage에 백업한다."
-   		sh "python /home/objectstorage/script/backup_war.py"
+   		sh "python /home/devtrack/pyscript/backup_war.py"
         
         //"빌드 결과물을 ObjectStorage에 Upload한다"
-    	sh "python /home/objectstorage/script/upload_war.py"
+    	sh "python /home/devtrack/pyscript/upload_war.py"
     	        
         //"stop springboot ~"
-        sh "ssh -v -o StrictHostKeyChecking=no root@10.41.2.48 sh /var/www/script/runNcp.sh stop"
+        sh "ssh -v -o StrictHostKeyChecking=no root@10.41.2.48 sh /home/devtrack/script/runNcp.sh stop"
         
         //"copy artipact  to remote server  over ssh !!"
-        sh "scp -p -r  ./target/*.war root@10.41.2.48:/var/www"
+        sh "scp -p -r  ./target/*.war root@10.41.2.48:/home/devtrack"
         
         //"start springboot ~"
-        sh "ssh  -o StrictHostKeyChecking=no root@10.41.2.48 sh /var/www/script/runNcp.sh start"
+        sh "ssh  -o StrictHostKeyChecking=no root@10.41.2.48 sh /home/devtrack/script/runNcp.sh start"
     }   
 }
