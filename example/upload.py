@@ -19,6 +19,6 @@ s3.put_object(Bucket=bucket_name, Key=object_name)
 
 # upload file
 object_name = 'lastsuccessful/helloNcp-0.0.1-SNAPSHOT.war'
-local_file_path = '/var/lib/jenkins/jobs/jenkinspipeline/workspace/target/helloNcp-0.0.1-SNAPSHOT.war'
+local_file_path = '/var/lib/jenkins/workspace/jenkinspipeline/target/helloNcp-0.0.1-SNAPSHOT.war'
 
 s3.upload_file(local_file_path, bucket_name, object_name)
