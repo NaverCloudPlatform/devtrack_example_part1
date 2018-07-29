@@ -52,7 +52,7 @@ node {
         sh "ssh -v -o StrictHostKeyChecking=no root@10.41.2.48 sh /home/devtrack/script/runNcp.sh stop"
         
         //"copy artipact  to remote server  over ssh !!"
-        sh "scp -p -r  ./target/*.war root@10.41.2.48:/home/devtrack"
+        sh "scp -p -r  ./target/*.war root@10.41.2.48:/home/devtrack/deploy"
         
         //"start springboot ~"
         sh "ssh  -o StrictHostKeyChecking=no root@10.41.2.48 sh /home/devtrack/script/runNcp.sh start"
