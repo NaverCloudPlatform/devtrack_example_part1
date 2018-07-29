@@ -2,10 +2,15 @@
 # chkconfig 2345 20 80
 # written by Gavin Kim on 2018.05.18
 # 프로세스 명을 명시한다.
+
 readonly PROC_NAME="helloNcp"
+
 # war 파일
+
 readonly DAEMON="/home/devtrack/deploy/helloNcp-0.0.1-SNAPSHOT.war"
+
 # 프로세스 아이디가 존재할 패스를 설정
+
 readonly PID_PATH="/home/devtrack/deploy/"
 readonly PROC_PID="${PID_PATH}${PROC_NAME}.pid"
 
@@ -30,7 +35,9 @@ start()
         echo " - failed to start."
     fi
 }
+
 # 중지
+
 stop()
 {
     echo "Stopping ${PROC_NAME}..."
@@ -44,7 +51,9 @@ stop()
         echo " - Shutdown ...."
     fi
 }
+
 # 상태
+
 status()
 {
     local PID=$(get_status)
