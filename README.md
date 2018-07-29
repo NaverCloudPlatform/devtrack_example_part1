@@ -21,5 +21,5 @@ $ pip install boto3
 upload_war.py
 
 
-
+오브젝트 스토리지에  빌드 결과물 backup을 위한 파이썬 스크립트
 backup_war.py 
