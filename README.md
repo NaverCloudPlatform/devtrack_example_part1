@@ -12,7 +12,10 @@
  과 같이 **UserName** 을 추가해주세요
   
 #### Lab 3. Jenkins 서버 생성
-
+- jenkins initialAdminPassword 확인
+ ```
+ $cat /var/lib/jenkins/secrets/initialAdminPassword
+ ```
 #### Lab 4. Jenkins pipeline 환경설정 1 – web 서버 만들기
 - yum 명령어로 java jdk1.8을 설치해 줍니다.
  ```
