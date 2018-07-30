@@ -16,14 +16,7 @@
  ```
  $cat /var/lib/jenkins/secrets/initialAdminPassword
  ```
- 
- - 폴더 생성
- ```
- $mkdir -p /home/devtrack/deploy/
- $mkdir -p /home/devtrack/deploy/backup/
- $mkdir -p /home/devtrack/script/
- 4mkdir -p /home/devtrack/pyscript/
- ```
+
 #### Lab 4. Jenkins pipeline 환경설정 1 – web 서버 만들기
 - yum 명령어로 java jdk1.8을 설치해 줍니다.
  ```
@@ -38,13 +31,7 @@
  javac 1.8.0_181
  ```
  
-  - 폴더 생성
- ```
- $mkdir -p /home/devtrack/deploy/
- $mkdir -p /home/devtrack/deploy/backup/
- $mkdir -p /home/devtrack/script/
- 4mkdir -p /home/devtrack/pyscript/
- ```
+
 #### Lab 5. Jenkins pipeline 환경설정 2 - ObjectStorage에 폴더 만들기
 
 #### Lab 6. Jenkins pipeline 환경설정 3 - Jenkins 서버와 Web 서버간  ssh 설정
@@ -94,24 +81,46 @@ chmod 766 /var/lib/jenkins/.ssh/known_hosts
 
 
 BOTO3 SDK설치
-1. epel이 설치되어 있는지 확인
+수동으로 설치
+https://pip.pypa.io/en/latest/installing.html
+- pip 설치 스크립트를 다운받는다.
 ```
-$ yum repolist
+wget https://bootstrap.pypa.io/get-pip.py
 ```
-2.	없으면 epel repository를 추가합니다.
+- 스크립트를 실행한다.
 ```
-$ yum install epel-release
-```
-3.	Python pip을 설치
-```
-$ yum install deltarpm
-$ yum install python-pip
-```
+python get-pip.py
+ ```
 4.	Python SDK for S3 API 설치
 ```
 $ pip install boto3
 ```
-
-
+  - jenkins 서버와 , web 서버에  폴더 생성
+ ```
+ $mkdir -p /home/devtrack/deploy/
+ $mkdir -p /home/devtrack/deploy/backup/
+ $mkdir -p /home/devtrack/script/
+ 4mkdir -p /home/devtrack/pyscript/
+ ```
+ 
+ - jenkins 서버 접속 후  object storage up/down 샘플 코드 다운로드 
+ ```
+ $cd /home/devtrack/pyscript/
+ $wget https://kr.objectstorage.ncloud.com/devtrack-exam/source/upload.py
+ $wget https://kr.objectstorage.ncloud.com/devtrack-exam/source/backup.py
+ ```
 
 #### Lab 8. Jenkins pipeline 설정을 통한 자동 빌드/배포 실행
+- web 서버에  폴더 생성
+ ```
+ $mkdir -p /home/devtrack/deploy/
+ $mkdir -p /home/devtrack/deploy/backup/
+ $mkdir -p /home/devtrack/script/
+ 4mkdir -p /home/devtrack/pyscript/
+ ```
+ 
+ - 스프링부트 war파일 실행을 위한  코드 다운로드 
+ ```
+ $cd /home/devtrac/script
+ $wget https://kr.objectstorage.ncloud.com/devtrack-exam/source/runNcp.sh
+ ```
