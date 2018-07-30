@@ -1,8 +1,14 @@
 # devtrack_example_part1
 ### 개발자를 위한 네이버 클라우드 플랫폼 실습 교육 Part 1 - Lab실습에 사용되는 코드들
 
-#### Lab 1. git client 프로그램 [다운로드](https://git-scm.com/downloads) 
+#### Lab 1. git client 프로그램
+[다운로드](https://git-scm.com/downloads) 
 
+ - git UI 실행은  커맨트 창에서  git gui 
+ ```
+ $git gui
+```
+  
 #### Lab 3. Jenkins 서버 생성
 
 #### Lab 4. Jenkins pipeline 환경설정 1 – web 서버 만들기
