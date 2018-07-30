@@ -16,6 +16,14 @@
  ```
  $cat /var/lib/jenkins/secrets/initialAdminPassword
  ```
+ 
+ - 폴더 생성
+ ```
+ $mkdir -p /home/devtrack/deploy/
+ $mkdir -p /home/devtrack/deploy/backup/
+ $mkdir -p /home/devtrack/script/
+ 4mkdir -p /home/devtrack/pyscript/
+ ```
 #### Lab 4. Jenkins pipeline 환경설정 1 – web 서버 만들기
 - yum 명령어로 java jdk1.8을 설치해 줍니다.
  ```
@@ -28,6 +36,14 @@
  
  $javac -version
  javac 1.8.0_181
+ ```
+ 
+  - 폴더 생성
+ ```
+ $mkdir -p /home/devtrack/deploy/
+ $mkdir -p /home/devtrack/deploy/backup/
+ $mkdir -p /home/devtrack/script/
+ 4mkdir -p /home/devtrack/pyscript/
  ```
 #### Lab 5. Jenkins pipeline 환경설정 2 - ObjectStorage에 폴더 만들기
 
@@ -64,6 +80,13 @@ $ssh-copy-id root@web서버사설ip
 -ssh 접속 테스트를 해봅니다
 ```
 ssh root@web서버사설ip ls /var/
+```
+- jenkins에서 ssh_key 사용을 위해 .ssh/ 폴더를 Jenkins 폴더 하위에 복사 하고 
+- id_rsa 파일 접근 권한 추가,  Known_hosts 파일에 쓰기 권한을 추가합니다.
+```
+cp -r ~/.ssh/ /var/lib/jenkins/
+chmod 755 /var/lib/jenkins/.ssh/id_rsa
+chmod 766 /var/lib/jenkins/.ssh/known_hosts
 ```
 
 #### Lab 7. Python SDK for S3 사용하여 Object storage에 파일올리기
