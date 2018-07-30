@@ -32,11 +32,10 @@
 #### Lab 5. Jenkins pipeline 환경설정 2 - ObjectStorage에 폴더 만들기
 
 #### Lab 6. Jenkins pipeline 환경설정 3 - Jenkins 서버와 Web 서버간  ssh 설정
--cat /var/lib/jenkins/secrets/initialAdminPassword
 ```
 $ssh-keygen -t rsa
 ```
--Passphrase : 빈값 ( SSH 자동로그인을 위해  키인증 패스워드 없음)
+- Passphrase : 빈값 ( SSH 자동로그인을 위해  키인증 패스워드 없음)
 ```
 Created directory '/root/.ssh'.
 Enter passphrase (empty for no passphrase):
@@ -82,6 +81,7 @@ $ yum install epel-release
 ```
 3.	Python pip을 설치
 ```
+$ yum install deltarpm
 $ yum install python-pip
 ```
 4.	Python SDK for S3 API 설치
