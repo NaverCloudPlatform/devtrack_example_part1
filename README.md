@@ -8,6 +8,8 @@
  ```
  $git gui
 ```
+- private git URL 입력시 https://<font color=red>UserName</font>@devtools.ncloud.com/2534562/helloNcp.git 
+ 과 같이 UserName 을 추가해주세요
   
 #### Lab 3. Jenkins 서버 생성
 
@@ -18,6 +20,8 @@
 #### Lab 6. Jenkins pipeline 환경설정 3 - Jenkins 서버와 Web 서버간  ssh 설정
 
 #### Lab 7. Python SDK for S3 사용하여 Object storage에 파일올리기
+
+
 
 BOTO3 SDK설치
 1. epel이 설치되어 있는지 확인
