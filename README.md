@@ -1,6 +1,8 @@
 # devtrack_example_part1
-## 개발자를 위한 네이버 클라우드 플랫폼 실습 교육 Part 1 - NCP에서의 CI/CD 예제
+### 개발자를 위한 네이버 클라우드 플랫폼 실습 교육 Part 1 - Lab 예제
 
+Lab 1. git client 프로그램
+      [다운로드](https://git-scm.com/downloads) 
 
 Lab 7. Python SDK for S3 사용하여 Object storage에 파일올리기 
 
