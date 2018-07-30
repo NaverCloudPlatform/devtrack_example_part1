@@ -18,7 +18,14 @@
  ```
  $yum install java-1.8.0-openjdk-devel.x86_64
  ```
-
+- 설치 확인
+ ```
+ $rpm -qa java*jdk-devel
+ java-1.8.0-openjdk-devel-1.8.0.181-3.b13.el7_5.x86_64
+ 
+ $javac -version
+ javac 1.8.0_181
+ ```
 #### Lab 5. Jenkins pipeline 환경설정 2 - ObjectStorage에 폴더 만들기
 
 #### Lab 6. Jenkins pipeline 환경설정 3 - Jenkins 서버와 Web 서버간  ssh 설정
