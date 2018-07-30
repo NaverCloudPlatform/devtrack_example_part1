@@ -8,12 +8,16 @@
  ```
  $git gui
 ```
-- private git URL 입력시 https://<font color=red>UserName</font>@devtools.ncloud.com/2534562/helloNcp.git 
- 과 같이 UserName 을 추가해주세요
+- private git URL 입력시 https://**UserName**@devtools.ncloud.com/2534562/helloNcp.git 
+ 과 같이 **UserName** 을 추가해주세요
   
 #### Lab 3. Jenkins 서버 생성
 
 #### Lab 4. Jenkins pipeline 환경설정 1 – web 서버 만들기
+- yum 명령어로 java jdk1.8을 설치해 줍니다.
+ ```
+ $yum install java-1.8.0-openjdk-devel.x86_64
+ ```
 
 #### Lab 5. Jenkins pipeline 환경설정 2 - ObjectStorage에 폴더 만들기
 
