@@ -6,7 +6,7 @@
 
  - git UI 실행은  커맨트 창에서  git gui 
  ```
- $git gui
+ git gui
 ```
 - private git URL 입력시 https://**UserName**@devtools.ncloud.com/2534562/helloNcp.git 
  과 같이 **UserName** 을 추가해주세요
@@ -14,21 +14,19 @@
 #### Lab 3. Jenkins 서버 생성
 - jenkins initialAdminPassword 확인
  ```
- $cat /var/lib/jenkins/secrets/initialAdminPassword
+ cat /var/lib/jenkins/secrets/initialAdminPassword
  ```
 
 #### Lab 4. Jenkins pipeline 환경설정 1 – web 서버 만들기
 - yum 명령어로 java jdk1.8을 설치해 줍니다.
  ```
- $yum install java-1.8.0-openjdk-devel.x86_64
+ yum install java-1.8.0-openjdk-devel.x86_64
  ```
 - 설치 확인
  ```
- $rpm -qa java*jdk-devel
- java-1.8.0-openjdk-devel-1.8.0.181-3.b13.el7_5.x86_64
+ rpm -qa java*jdk-devel
  
- $javac -version
- javac 1.8.0_181
+ javac -version
  ```
  
 
@@ -36,7 +34,7 @@
 
 #### Lab 6. Jenkins pipeline 환경설정 3 - Jenkins 서버와 Web 서버간  ssh 설정
 ```
-$ssh-keygen -t rsa
+ssh-keygen -t rsa
 ```
 - Passphrase : 빈값 ( SSH 자동로그인을 위해  키인증 패스워드 없음)
 ```
@@ -62,7 +60,7 @@ The key's randomart image is:
 ```
 - myweb 서버에 public key를 전송합니다
 ```
-$ssh-copy-id root@web서버사설ip
+ssh-copy-id root@web서버사설ip
 ```
 -ssh 접속 테스트를 해봅니다
 ```
@@ -93,34 +91,35 @@ python get-pip.py
  ```
 4.	Python SDK for S3 API 설치
 ```
-$ pip install boto3
+ pip install boto3
 ```
   - jenkins 서버와 , web 서버에  폴더 생성
  ```
- $mkdir -p /home/devtrack/deploy/
- $mkdir -p /home/devtrack/deploy/backup/
- $mkdir -p /home/devtrack/script/
- 4mkdir -p /home/devtrack/pyscript/
+ mkdir -p /home/devtrack/deploy/
+ mkdir -p /home/devtrack/deploy/backup/
+ mkdir -p /home/devtrack/script/
+ mkdir -p /home/devtrack/pyscript/
+ chmod 777 /home/devtrack/deploy/backup
  ```
  
  - jenkins 서버 접속 후  object storage up/down 샘플 코드 다운로드 
  ```
- $cd /home/devtrack/pyscript/
- $wget https://kr.objectstorage.ncloud.com/devtrack-exam/source/upload.py
- $wget https://kr.objectstorage.ncloud.com/devtrack-exam/source/backup.py
+ cd /home/devtrack/pyscript/
+ wget https://kr.objectstorage.ncloud.com/devtrack-exam/source/upload.py
+ wget https://kr.objectstorage.ncloud.com/devtrack-exam/source/backup.py
  ```
 
 #### Lab 8. Jenkins pipeline 설정을 통한 자동 빌드/배포 실행
 - web 서버에  폴더 생성
  ```
- $mkdir -p /home/devtrack/deploy/
- $mkdir -p /home/devtrack/deploy/backup/
- $mkdir -p /home/devtrack/script/
- 4mkdir -p /home/devtrack/pyscript/
+ mkdir -p /home/devtrack/deploy/
+ mkdir -p /home/devtrack/deploy/backup/
+ mkdir -p /home/devtrack/script/
+ mkdir -p /home/devtrack/pyscript/
  ```
  
  - 스프링부트 war파일 실행을 위한  코드 다운로드 
  ```
- $cd /home/devtrac/script
- $wget https://kr.objectstorage.ncloud.com/devtrack-exam/source/runNcp.sh
+ cd /home/devtrac/script
+ wget https://kr.objectstorage.ncloud.com/devtrack-exam/source/runNcp.sh
  ```
