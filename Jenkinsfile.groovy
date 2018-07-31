@@ -43,7 +43,7 @@ node {
     stage('Deploy') {        
         
         // "빌드 결과물을 objectstorage에 백업한다."
-   		sh "python /home/devtrack/pyscript/backup_war.py"
+   		//sh "python /home/devtrack/pyscript/backup_war.py"
         
         //"빌드 결과물을 ObjectStorage에 Upload한다"
     	sh "python /home/devtrack/pyscript/upload_war.py"
