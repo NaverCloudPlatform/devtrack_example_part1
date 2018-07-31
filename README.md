@@ -71,7 +71,7 @@ ssh root@web서버사설ip ls /var/
 ```
 cp -r ~/.ssh/ /var/lib/jenkins/
 chmod 755 /var/lib/jenkins/.ssh/id_rsa
-chmod 766 /var/lib/jenkins/.ssh/known_hosts
+chmod 777 /var/lib/jenkins/.ssh/known_hosts
 ```
 
 #### Lab 7. Python SDK for S3 사용하여 Object storage에 파일올리기
