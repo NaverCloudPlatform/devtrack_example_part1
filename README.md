@@ -31,6 +31,10 @@
  
 
 #### Lab 5. Jenkins pipeline 환경설정 2 - ObjectStorage에 폴더 만들기
+   buildresult  ㅡㅡㅡlastsuccessful
+                  |
+                  ㄴbackup
+                  
 
 #### Lab 6. Jenkins pipeline 환경설정 3 - Jenkins 서버와 Web 서버간  ssh 설정
 ```
@@ -70,6 +74,7 @@ ssh root@web서버사설ip ls /var/
 - id_rsa 파일 접근 권한 추가,  Known_hosts 파일에 쓰기 권한을 추가합니다.
 ```
 cp -r ~/.ssh/ /var/lib/jenkins/
+chmod 777 /var/lib/jenkins/.ssh
 chmod 755 /var/lib/jenkins/.ssh/id_rsa
 chmod 777 /var/lib/jenkins/.ssh/known_hosts
 ```
@@ -79,7 +84,6 @@ chmod 777 /var/lib/jenkins/.ssh/known_hosts
 
 
 BOTO3 SDK설치
-수동으로 설치
 https://pip.pypa.io/en/latest/installing.html
 - pip 설치 스크립트를 다운받는다.
 ```
