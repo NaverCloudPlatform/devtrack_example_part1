@@ -93,7 +93,7 @@ wget https://bootstrap.pypa.io/get-pip.py
 ```
 python get-pip.py
  ```
-4.	Python SDK for S3 API 설치
+- Python SDK for S3 API 설치
 ```
  pip install boto3
 ```
