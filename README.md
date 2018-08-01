@@ -31,9 +31,10 @@
  
 
 #### Lab 5. Jenkins pipeline 환경설정 2 - ObjectStorage에 폴더 만들기
-   buildresult  ㅡㅡㅡlastsuccessful
-                  |
-                  ㄴbackup
+   - 버킷이름 : buildresult
+   - 폴더명 : 
+       - lastsuccessful (마지막 성공 빌드 결과물 저장)
+       - backup ( 과거 배포파일 백업용 폴더 )
                   
 
 #### Lab 6. Jenkins pipeline 환경설정 3 - Jenkins 서버와 Web 서버간  ssh 설정
